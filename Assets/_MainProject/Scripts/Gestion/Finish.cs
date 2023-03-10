@@ -44,18 +44,43 @@ public class Finish : MonoBehaviour
             _capFinish = false;
 
             int noScene = SceneManager.GetActiveScene().buildIndex;
-            if (noScene == 1)
-            {
-                _player.finPartieJoueur();
-                Debug.Log("*** Fin de la partie ***");
-                Debug.Log($"{Time.time} Secondes se sont écoulées");
-                Debug.Log($"Nombre d'accrochages {_gestionJeu.Pointage}");
-                Debug.Log($"{Time.time + _gestionJeu.Pointage} Pts");
-            }
-            else
-            {
-                SceneManager.LoadScene(noScene + 1);
 
+            switch (noScene)
+            {
+                case 0:
+                    {
+                        _gestionJeu.SetNiveau1(_gestionJeu.Pointage, Time.time);
+                        SceneManager.LoadScene(noScene + 1);
+
+                    }
+                    break;
+                case 1:
+                    {
+                        _gestionJeu.SetNiveau2(_gestionJeu.Pointage, Time.time);
+                        SceneManager.LoadScene(noScene + 1);
+                    }
+                break;
+                case 2:
+                    {
+                        Debug.Log("*** Fin de la partie ***");
+
+
+                        Debug.Log("*** Niveau 1 ***");
+                        Debug.Log($"{_gestionJeu.TempsNiveau1} Secondes se sont écoulées");
+                        Debug.Log($"Nombre d'accrochages {_gestionJeu.AccrochageNiveau1}");
+
+                        Debug.Log("*** Niveau 2 ***");
+                        Debug.Log($"{_gestionJeu.TempsNiveau2} Secondes se sont écoulées");
+                        Debug.Log($"Nombre d'accrochages {_gestionJeu.AccrochageNiveau2}");
+
+                        Debug.Log("*** Niveau 3 ***");
+                        Debug.Log($"{Time.time} Secondes se sont écoulées");
+                        Debug.Log($"Nombre d'accrochages {_gestionJeu.Pointage}");
+                        Debug.Log($"{Time.time + _gestionJeu.Pointage} Pts");
+
+                        _player.finPartieJoueur();
+                    }
+                    break;
             }
 
         }
