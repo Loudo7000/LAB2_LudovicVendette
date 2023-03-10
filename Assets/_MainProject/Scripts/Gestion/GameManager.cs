@@ -6,8 +6,10 @@ public class GameManager : MonoBehaviour
 {
     // Attributs
     private int _pointage;
+    private int _accrochageNiveau1 = 0;
+    private float _tempsNiveau1 = 0.0f;
 
-    public int Pointage { get => _pointage; set => _pointage = value; }
+
 
     // Méthodes privées
 
@@ -48,4 +50,7 @@ public class GameManager : MonoBehaviour
         Pointage++;
     }
 
+    public int Pointage { get => _pointage; set => _pointage = value; }
+    public int AccrochageNiveau1 { get => _accrochageNiveau1; set => _accrochageNiveau1 = value; }
+    public float TempsNiveau1 { get => _tempsNiveau1; set => _tempsNiveau1 = value; }
 }

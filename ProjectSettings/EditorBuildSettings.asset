@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_MainProject/Scenes/Scene_LudovicVendette.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/_MainProject/Scenes/Niveau2.unity
+    guid: 87a48bc77d076ad42ab84d86b45da6dd
+  - enabled: 1
+    path: Assets/_MainProject/Scenes/Niveau3.unity
+    guid: c44552d3332958d4e873e07ace606336
   m_configObjects: {}
