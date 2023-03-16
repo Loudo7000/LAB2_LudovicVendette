@@ -29,7 +29,7 @@ public class ZonePiege : MonoBehaviour
             foreach(var rb in _listeRb) 
             {
                 rb.useGravity = true;
-                Vector3 direction = new Vector3(0f, -1f, 0f);
+                Vector3 direction = new Vector3(0f, 0f, -1f);
                 rb.AddForce(direction * _intensiteForce);
             }
             _ZoneAct = true;
