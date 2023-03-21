@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     // Attributs
-    [SerializeField] private float _vitesse = 500f;
+    [SerializeField] private float _velocity = 500f;
+    [SerializeField] private float _force = 300f;
     private Rigidbody _rb;
 
     // Méthodes privées
@@ -27,8 +29,10 @@ public class Player : MonoBehaviour
         Vector3 direction = new Vector3(positionX, 0f, positionZ);
         direction.Normalize();
         //transform.Translate(direction * Time.deltaTime * _vitesse);
-        _rb.velocity = direction * Time.fixedDeltaTime * _vitesse;
-        //_rb.AddForce(direction * Time.fixedDeltaTime * _vitesse);
+        if (SceneManager.GetActiveScene().buildIndex == 1) 
+            _rb.AddForce(direction * Time.fixedDeltaTime * _force);
+        else
+            _rb.velocity = direction * Time.fixedDeltaTime * _velocity;
 
     }
 
