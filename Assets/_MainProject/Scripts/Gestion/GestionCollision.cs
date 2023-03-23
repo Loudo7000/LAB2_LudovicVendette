@@ -14,6 +14,7 @@ public class GestionCollision : MonoBehaviour
     {
         _gestionJeu= FindObjectOfType<GameManager>();
         _touche= false;
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -26,11 +27,21 @@ public class GestionCollision : MonoBehaviour
                 //gameObject.GetComponent<Rigidbody>().useGravity=false;
                 _gestionJeu.AugmenterPointage();
                 _touche = true;
+                StartCoroutine(Wait4());
+
             }
 
-           
+
         }
 
 
     }
+    IEnumerator Wait4()    {
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(4);
+
+        gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
+        _touche = false;
+    }
+
 }
