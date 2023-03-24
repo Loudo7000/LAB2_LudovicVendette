@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     private float _tempsNiveau1 = 0.0f;
     private int _accrochageNiveau2 = 0;
     private float _tempsNiveau2 = 0.0f;
+    private int _accrochageNiveau3 = 0;
+    private float _tempsNiveau3 = 0.0f;
 
 
 
@@ -31,7 +33,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         InstructionDepart();
-        Pointage= 0;
+        Pointage = 0;
     }
 
     private void Update()
@@ -69,4 +71,6 @@ public class GameManager : MonoBehaviour
     public float TempsNiveau1 { get => _tempsNiveau1; set => _tempsNiveau1 = value; }
     public int AccrochageNiveau2 { get => _accrochageNiveau2; set => _accrochageNiveau2 = value; }
     public float TempsNiveau2 { get => _tempsNiveau2; set => _tempsNiveau2 = value; }
+    public int AccrochageNiveau3 { get => _accrochageNiveau3; set => _accrochageNiveau3 = value; }
+    public float TempsNiveau3 { get => _tempsNiveau3; set => _tempsNiveau3 = value; }
 }

@@ -38,9 +38,6 @@ public class Finish : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && !_capFinish)
         {
-
-            gameObject.GetComponent<MeshRenderer>().material.color = Color.green;
-
             _capFinish = false;
 
             int noScene = SceneManager.GetActiveScene().buildIndex;
@@ -70,10 +67,18 @@ public class Finish : MonoBehaviour
                         Debug.Log($"Nombre d'accrochages {_gestionJeu.AccrochageNiveau1}");
 
                         Debug.Log("*** Niveau 2 ***");
+                        _gestionJeu.TempsNiveau2 = _gestionJeu.TempsNiveau2 - _gestionJeu.TempsNiveau1;
+                        _gestionJeu.AccrochageNiveau2 = _gestionJeu.AccrochageNiveau2 - _gestionJeu.AccrochageNiveau1;
                         Debug.Log($"{_gestionJeu.TempsNiveau2} Secondes se sont écoulées");
                         Debug.Log($"Nombre d'accrochages {_gestionJeu.AccrochageNiveau2}");
 
                         Debug.Log("*** Niveau 3 ***");
+                        _gestionJeu.TempsNiveau3 = Time.time - _gestionJeu.TempsNiveau2 - _gestionJeu.TempsNiveau1;
+                        _gestionJeu.AccrochageNiveau3 = _gestionJeu.Pointage - _gestionJeu.AccrochageNiveau2 - _gestionJeu.AccrochageNiveau1;
+                        Debug.Log($"{_gestionJeu.TempsNiveau3} Secondes se sont écoulées");
+                        Debug.Log($"Nombre d'accrochages {_gestionJeu.AccrochageNiveau3}");
+
+                        Debug.Log("*** Total ***");
                         Debug.Log($"{Time.time} Secondes se sont écoulées");
                         Debug.Log($"Nombre d'accrochages {_gestionJeu.Pointage}");
                         Debug.Log($"{Time.time + _gestionJeu.Pointage} Pts");
