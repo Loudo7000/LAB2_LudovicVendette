@@ -10,6 +10,8 @@ public class Finish : MonoBehaviour
     private bool _capFinish;
     private GameManager _gestionJeu;
     private Player _player;
+    private float total;
+
 
 
     // Méthodes privées
@@ -79,9 +81,10 @@ public class Finish : MonoBehaviour
                         Debug.Log($"Nombre d'accrochages {_gestionJeu.AccrochageNiveau3}");
 
                         Debug.Log("*** Total ***");
+                        total = Time.time + _gestionJeu.Pointage;
                         Debug.Log($"{Time.time.ToString("f2")} Secondes se sont écoulées");
                         Debug.Log($"Nombre d'accrochages {_gestionJeu.Pointage}");
-                        Debug.Log($"{Time.time.ToString("f2") + _gestionJeu.Pointage} Pts");
+                        Debug.Log($"{total.ToString("f2")} Pts");
 
                         _player.finPartieJoueur();
                     }
