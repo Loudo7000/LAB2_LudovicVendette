@@ -71,12 +71,14 @@ public class Finish : MonoBehaviour
                         Debug.Log("*** Niveau 2 ***");
                         _gestionJeu.TempsNiveau2 = _gestionJeu.TempsNiveau2 - _gestionJeu.TempsNiveau1;
                         _gestionJeu.AccrochageNiveau2 = _gestionJeu.AccrochageNiveau2 - _gestionJeu.AccrochageNiveau1;
+
                         Debug.Log($"{_gestionJeu.TempsNiveau2.ToString("f2")} Secondes se sont écoulées");
                         Debug.Log($"Nombre d'accrochages {_gestionJeu.AccrochageNiveau2}");
 
                         Debug.Log("*** Niveau 3 ***");
                         _gestionJeu.TempsNiveau3 = Time.time - _gestionJeu.TempsNiveau2 - _gestionJeu.TempsNiveau1;
                         _gestionJeu.AccrochageNiveau3 = _gestionJeu.Pointage - _gestionJeu.AccrochageNiveau2 - _gestionJeu.AccrochageNiveau1;
+
                         Debug.Log($"{_gestionJeu.TempsNiveau3.ToString("f2")} Secondes se sont écoulées");
                         Debug.Log($"Nombre d'accrochages {_gestionJeu.AccrochageNiveau3}");
 
