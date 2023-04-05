@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GestionScene : MonoBehaviour
 {
-    public void ChangerSceneSuivante()
+
+
+    public void ChangerJeu
+        ()
     {
         int noScene = SceneManager.GetActiveScene().buildIndex; // Récupère l'index de la scène en cours
-        SceneManager.LoadScene(noScene + 1);
+        SceneManager.LoadScene(1);
     }
 
     public void Quitter()
@@ -20,5 +23,6 @@ public class GestionScene : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
 
 }

@@ -42,6 +42,8 @@ public class UIManager : MonoBehaviour
         }
     }
 
+
+
     public void ChangerPointage(int p_pointage)
     {
         _txtAccrochages.text = "Accrochages : " + p_pointage.ToString();
