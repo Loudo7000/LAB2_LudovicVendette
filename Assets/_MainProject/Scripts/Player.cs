@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
         Vector3 direction = new Vector3(positionX, 0f, positionZ);
         direction.Normalize();
         //transform.Translate(direction * Time.deltaTime * _vitesse);
-        if (SceneManager.GetActiveScene().buildIndex == 1) 
+        if (SceneManager.GetActiveScene().buildIndex == 2) 
             _rb.AddForce(direction * Time.fixedDeltaTime * _force);
         else
             _rb.velocity = direction * Time.fixedDeltaTime * _velocity;
