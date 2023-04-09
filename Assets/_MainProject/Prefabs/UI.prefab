@@ -1021,6 +1021,7 @@ MonoBehaviour:
   _txtAccrochages: {fileID: 3026638166154601491}
   _txtTemps: {fileID: 3026638165967358373}
   _menuPause: {fileID: 3026638165344762538}
+  _player: {fileID: 0}
 --- !u!1 &3026638165967358375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,7 +1088,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Temps : '
+  m_text: 'Temps : 0,00'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

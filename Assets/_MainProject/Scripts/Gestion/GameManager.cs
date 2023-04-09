@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private int _pointage;
     private float _tempsDepart = 0;
     private float _tempsFinal = 0;
+    private float _tempsAjust = 0;
 
 
 
@@ -50,11 +51,12 @@ public class GameManager : MonoBehaviour
 
     public void SetTempsFinal(float p_tempFinal)
     {
-        _tempsFinal = p_tempFinal - _tempsDepart;
+        _tempsFinal = p_tempFinal - _tempsDepart - TempsAjust;
     }
 
 
     public int Pointage { get => _pointage; set => _pointage = value; }
     public float TempsDepart { get => _tempsDepart; set => _tempsDepart = value; }
     public float TempsFinal { get => _tempsFinal; set => _tempsFinal = value; }
+    public float TempsAjust { get => _tempsAjust; set => _tempsAjust = value; }
 }
