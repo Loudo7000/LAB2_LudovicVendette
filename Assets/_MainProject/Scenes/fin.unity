@@ -759,7 +759,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Menu Principal
+  m_text: Retour menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a97832212368d4d43834331084b44269, type: 2}
   m_sharedMaterial: {fileID: -4294323955921550009, guid: a97832212368d4d43834331084b44269, type: 2}
